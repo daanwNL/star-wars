@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import CustomCard from './CustomCard';
 import ButtonLike from "./ButtonLike";
 import ButtonDislike from "./ButtonDislike";
+import { Row, Col, Space } from 'antd';
 
 const CardWrapper = () => {
   const [users, setUsers] = useState([]);
@@ -36,26 +37,30 @@ const CardWrapper = () => {
   };
 
   return (
-    <div className="card-wrapper">
+    <div className="card-wrapper" style={{ padding: '0 10px' }}>
       {users.length > 0 && currentCardIndex < users.length ? (
-        <>
-          <CustomCard
-            user={users[currentCardIndex]}
-            profileImageUrl={`https://robohash.org/${users[currentCardIndex].id}?200x200`}
-          />
-          <div>
-            <ButtonLike
+        <Row justify="center" style={{ marginTop: '10px', marginBottom: '10px' }}>
+          <Col span={24}>
+            <CustomCard
               user={users[currentCardIndex]}
-              handleLikeUser={handleLikeUser}
-              handleNextCard={handleNextCard}
+              profileImageUrl={`https://robohash.org/${users[currentCardIndex].id}?200x200`}
             />
-            <ButtonDislike
-              user={users[currentCardIndex]}
-              handleDislikeUser={handleDislikeUser}
-              handleNextCard={handleNextCard}
-            />
-          </div>
-        </>
+          </Col>
+          <Col span={24} style={{ marginTop: '10px', textAlign: 'center' }}>
+            <Space size="small">
+              <ButtonLike
+                user={users[currentCardIndex]}
+                handleLikeUser={handleLikeUser}
+                handleNextCard={handleNextCard}
+              />
+              <ButtonDislike
+                user={users[currentCardIndex]}
+                handleDislikeUser={handleDislikeUser}
+                handleNextCard={handleNextCard}
+              />
+            </Space>
+          </Col>
+        </Row>
       ) : (
         <p>Geen kaarten meer</p>
       )}

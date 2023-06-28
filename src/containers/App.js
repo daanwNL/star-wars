@@ -1,16 +1,18 @@
 import React from "react";
-import Header from "../components/Header";
+import AppHeader from "../components/AppHeader";
 import CardWrapper from "../components/CardWrapper";
-import { ConfigProvider, Layout } from 'antd';
+import { ConfigProvider } from 'antd';
 import './App.css';
 
 function App() {
   return (
     <ConfigProvider theme={{ token: { colorPrimary: '#76b296' } }}>
-      <Layout>
-        <Header />
-        <CardWrapper />
-      </Layout>
+      <div className="app-container">
+        <div className="app-wrapper">
+          <AppHeader />
+          <CardWrapper />
+        </div>
+      </div>
     </ConfigProvider>
   );
 }

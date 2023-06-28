@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from 'antd';
+import { LikeOutlined } from '@ant-design/icons';
 
 const ButtonLike = ({ user, handleLikeUser, handleNextCard }) => {
   const handleLike = () => {
@@ -9,9 +10,7 @@ const ButtonLike = ({ user, handleLikeUser, handleNextCard }) => {
   };
 
   return (
-    <Button type="primary" onClick={handleLike}>
-      Like
-    </Button>
+    <Button type="primary" shape="circle" onClick={handleLike} icon={<LikeOutlined />} size="large" />
   );
 };
 

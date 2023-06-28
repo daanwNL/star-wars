@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card } from 'antd';
+import './CustomCard.css'; // Importeer de aangepaste CSS-stijlen
 
 const { Meta } = Card;
 
@@ -9,7 +10,7 @@ const CustomCard = ({ user, profileImageUrl }) => {
   return (
     <Card
       hoverable
-      style={{ width: 240 }}
+      className="custom-card" // Voeg de aangepaste CSS-klasse toe
       cover={<img alt="Profile" src={profileImageUrl} />}
     >
       <Meta title={name} description={city} />

@@ -1,20 +1,69 @@
-.App {
-  text-align: center;
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Uitlijning voor schermbreedtes < 400px */
+  height: 100vh;
+  background: linear-gradient(#614851, #a78e96); /* Gradient achtergrondkleur */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-wrapper {
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  margin: 0 auto; /* Horizontaal gecentreerd */
+  background: linear-gradient(#cbf3e0, #f2f2f2); /* Gradient achtergrondkleur */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (min-width: 400px) {
+  .app-container {
+    align-items: center; /* Uitlijning voor schermbreedtes >= 400px */
+  }
+
+  .app-wrapper {
+    border: 3px solid #300d19;
+    border-radius: 15px;
+    margin-bottom: 0; /* Marge onderaan verwijderd */
+  }
+
+  .app-header {
+    border-top-left-radius: 10px; /* Border radius alleen linksboven op schermen >= 400px */
+    border-top-right-radius: 10px; /* Border radius alleen rechtsboven op schermen >= 400px */
+    }
+}
+
+@media (max-width: 400px) {
+  .app-wrapper {
+    position: fixed; /* Vaste positionering */
+    top: 0; /* Element bovenaan het scherm */
+    bottom: 0; /* Element onderaan het scherm */
+    margin-bottom: initial; /* Terugzetten naar de standaardwaarde */
   }
 }
 
+.app-header {
+  background-color: #963254;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.app-header-title {
+  margin: 0;
+  color: #fff;
+}
+
+.app-header-actions {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Rechts uitlijnen */
+}
+
+.app-header-actions > .ant-btn {
+  margin-left: 8px;
+}
+
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,17 +71,4 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

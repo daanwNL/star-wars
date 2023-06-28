@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from 'antd';
+import { DislikeOutlined } from '@ant-design/icons';
 
 const ButtonDislike = ({ user, handleDislikeUser, handleNextCard }) => {
   const handleDislike = () => {
@@ -9,9 +10,7 @@ const ButtonDislike = ({ user, handleDislikeUser, handleNextCard }) => {
   };
 
   return (
-    <Button type="default" onClick={handleDislike}>
-      Dislike
-    </Button>
+    <Button type="default" shape="circle" onClick={handleDislike} icon={<DislikeOutlined />} size="large" />
   );
 };
 
