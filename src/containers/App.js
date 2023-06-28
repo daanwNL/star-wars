@@ -1,17 +1,15 @@
 import React from "react";
 import Header from "../components/Header";
-import CardList from "../components/CardList";
-import Footer from "../components/Footer";
+import CardWrapper from "../components/CardWrapper";
 import { ConfigProvider, Layout } from 'antd';
 import './App.css';
 
 function App() {
   return (
-    <ConfigProvider theme={{token: {colorPrimary: '#76b296'}}}>
+    <ConfigProvider theme={{ token: { colorPrimary: '#76b296' } }}>
       <Layout>
         <Header />
-        <CardList />
-        <Footer />
+        <CardWrapper />
       </Layout>
     </ConfigProvider>
   );
