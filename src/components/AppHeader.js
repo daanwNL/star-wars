@@ -1,12 +1,23 @@
 import React from 'react';
 import { Button } from 'antd';
+import { Link, useNavigate } from 'react-router-dom';
 
 const AppHeader = () => {
+  const navigate = useNavigate();
+
+  const handleShowLikes = () => {
+    navigate('/likedUsersWrapper');
+  };
+
   return (
     <div className="app-header">
-      <h1 className="app-header-title">Fitdate</h1>
+      <Link to="/cardWrapper" className="app-header-title">
+        Fitdate
+      </Link>
       <div className="app-header-actions">
-        <Button type="default" ghost>Show likes</Button>
+        <Button type="default" ghost onClick={handleShowLikes}>
+          Show likes
+        </Button>
       </div>
     </div>
   );
