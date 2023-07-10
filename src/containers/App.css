@@ -14,7 +14,7 @@
   background: linear-gradient(#cbf3e0, #f2f2f2); /* Gradient achtergrondkleur */
 }
 
-@media (min-width: 400px) {
+@media (min-width: 490px) {
   .app-container {
     align-items: center; /* Uitlijning voor schermbreedtes >= 400px */
   }
@@ -32,7 +32,7 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 490px) {
   .app-wrapper {
     position: fixed; /* Vaste positionering */
     top: 0; /* Element bovenaan het scherm */

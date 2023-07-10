@@ -3,7 +3,7 @@ import CustomCard from './CustomCard';
 import ButtonLike from "./ButtonLike";
 import ButtonDislike from "./ButtonDislike";
 import { Row, Col, Space } from 'antd';
-import './CardWrapper.css';
+import "./CardWrapper.css";
 
 const CardWrapper = () => {
   const [users, setUsers] = useState([]);
@@ -38,7 +38,7 @@ const CardWrapper = () => {
   };
 
   return (
-    <div className="card-wrapper">
+    <div className="card-wrapper" style={{ padding: '0 10px' }}>
       {users.length > 0 && currentCardIndex < users.length ? (
         <Row justify="center" style={{ marginTop: '10px', marginBottom: '10px' }}>
           <Col span={24}>
@@ -63,13 +63,13 @@ const CardWrapper = () => {
           </Col>
         </Row>
       ) : (
-        <>
+        <div className='no-cards-block'>
           <p className="no-cards">Je hebt alle profielen gezien.</p>
           <p className="info-message">In de toekomst kun je ook een lijst met verstuurde likes zien. Deze wordt nu alleen nog op de achtergrond opgeslagen.</p>
-        </>
+        </div>
       )}
     </div>
   );
 };
 
-export default CardWrapper
+export default CardWrapper;
