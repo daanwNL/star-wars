@@ -1,16 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
 .app-container {
   display: flex;
   justify-content: center;
   align-items: flex-start; /* Uitlijning voor schermbreedtes < 400px */
   height: 100vh;
-  background: linear-gradient(#614851, #a78e96); /* Gradient achtergrondkleur */
+  background: linear-gradient(#000000, #2b0202); /* Gradient achtergrondkleur */
 }
 
 .app-wrapper {
   width: 100%;
   box-sizing: border-box;
   margin: 0 auto; /* Horizontaal gecentreerd */
-  background: linear-gradient(#cbf3e0, #f2f2f2); /* Gradient achtergrondkleur */
+  background: linear-gradient(#444444, #000000); /* Gradient achtergrondkleur */
 }
 
 @media (min-width: 490px) {
@@ -19,7 +21,7 @@
   }
 
   .app-wrapper {
-    border: 3px solid #300d19;
+    border: 3px solid #000;
     border-radius: 15px;
     margin-bottom: 0; /* Marge onderaan verwijderd */
     height: 620px;
@@ -42,7 +44,7 @@
 }
 
 .app-header {
-  background-color: #963254;
+  background-color: #610909;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -55,4 +57,44 @@
 .app-header-title {
   margin: 0;
   color: #fff;
+}
+
+.filmslist-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.card-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.episode-id {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #610909;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.title {
+  flex-grow: 1;
+  font-size: 16px;
+  color: #000;
+  font-family: 'Righteous', cursive;
+}
+
+.button-heading {
+  color: white;
 }

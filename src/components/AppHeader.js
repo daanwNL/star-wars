@@ -5,7 +5,7 @@ const AppHeader = () => {
   return (
     <div className="app-header">
       <h1 className="app-header-title">
-        Fitdate
+        Star Wars movies
       </h1>
     </div>
   );

@@ -1,16 +1,16 @@
 import React from "react";
 import AppHeader from "../components/AppHeader";
-import CardWrapper from "../components/CardWrapper";
+import FilmList from "../components/FilmList";
 import { ConfigProvider } from "antd";
 import "./App.css";
 
 function App() {
     return (
-      <ConfigProvider theme={{ token: { colorPrimary: "#76b296" } }}>
+      <ConfigProvider theme={{ token: { colorPrimary: "#610909" } }}>
         <div className="app-container">
           <div className="app-wrapper">
             <AppHeader/>
-            <CardWrapper/>
+            <FilmList/>
           </div>
         </div>
       </ConfigProvider>
